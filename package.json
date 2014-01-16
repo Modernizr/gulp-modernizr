@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/terinjokes/gulp-uglify",
   "dependencies": {
-    "customizr": "https://github.com/doctyper/Customizr/tarball/develop",
+    "customizr": "https://github.com/doctyper/customizr/tarball/develop",
     "gulp-util": "~2.2.10",
     "through": "~2.3.4"
   },

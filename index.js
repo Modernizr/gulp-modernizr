@@ -20,7 +20,7 @@ module.exports = function (fileName, opt) {
 	// Ensure opt exists
 	opt = opt || {};
 
-	// Enable string parsing in Customizr
+	// Enable string parsing in customizr
 	opt.useBuffers = true;
 
 	// Set crawl to false, Gulp is providing files & data
