@@ -55,7 +55,7 @@ gulp.src('./js/*.js')
 ```
 
 #### Available Settings
-##### See the [customizr repository](https://github.com/doctyper/customizr) for valid settings.
+##### See the [customizr repository](https://github.com/doctyper/customizr#config-file) for valid settings.
 
 [modernizr-travis-url]: http://travis-ci.org/doctyper/gulp-modernizr
 [modernizr-travis-image]: https://secure.travis-ci.org/doctyper/gulp-modernizr.png?branch=master
