@@ -11,8 +11,9 @@
     "url": "https://github.com/terinjokes/gulp-uglify.git"
   },
   "keywords": [
+    "gulpplugin",
     "modernizr",
-    "gulpplugin"
+    "customizr"
   ],
   "author": "Richard Herrera",
   "license": "MIT",
