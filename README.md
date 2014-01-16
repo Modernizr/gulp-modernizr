@@ -2,6 +2,10 @@
 # gulp-modernizr [![NPM version][modernizr-npm-image]][modernizr-npm-url] [![Build status][modernizr-travis-image]][modernizr-travis-url]
 > Modernizr plugin for Gulp
 -->
+[![Build Status](https://travis-ci.org/doctyper/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/doctyper/gulp-modernizr)
+
+# gulp-modernizr
+A [Gulp](http://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
 ## Usage
 
@@ -41,7 +45,7 @@ gulp.src('./js/*.js')
 #### settings
 Type: `Object`
 
-You can pass settings as an object. See the [list of available settings](https://github.com/doctyper/customizr) for valid settings.
+You can pass settings as an object. See the [customizr repository](https://github.com/doctyper/customizr#config-file) for valid settings.
 
 ```javascript
 gulp.src('./js/*.js')
@@ -50,9 +54,16 @@ gulp.src('./js/*.js')
   }));
 ```
 
+#### Available Settings
+##### See the [customizr repository](https://github.com/doctyper/customizr) for valid settings.
+
+[modernizr-travis-url]: http://travis-ci.org/doctyper/gulp-modernizr
+[modernizr-travis-image]: https://secure.travis-ci.org/doctyper/gulp-modernizr.png?branch=master
 <!---
-[modernizr-travis-url]: http://travis-ci.org/lazd/gulp-modernizr
-[modernizr-travis-image]: https://secure.travis-ci.org/lazd/gulp-modernizr.png?branch=master
 [modernizr-npm-url]: https://npmjs.org/package/gulp-modernizr
 [modernizr-npm-image]: https://badge.fury.io/js/gulp-modernizr.png
 -->
+
+## License
+Copyright (c) 2013 Richard Herrera
+Licensed under the MIT license.
