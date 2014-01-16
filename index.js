@@ -6,6 +6,7 @@ var path = require("path"),
 module.exports = function (fileName, opt) {
 	"use strict";
 
+	// Set some defaults
 	var PLUGIN_NAME = "gulp-modernizr",
 		DEFAULT_FILE_NAME = "modernizr.js";
 
@@ -33,13 +34,17 @@ module.exports = function (fileName, opt) {
 	// "Your plugin shouldn't do things that other plugins are responsible for"
 	opt.uglify = opt.uglify || false;
 
+	// Save first file for metadata purposes
 	var firstFile;
 
 	function storeBuffers(file) {
+
+		// Return if null
 		if (file.isNull()) {
 			return;
 		}
 
+		// No stream support (yet?)
 		if (file.isStream()) {
 			return stream.emit("error", new gutil.PluginError({
 				plugin: PLUGIN_NAME,
@@ -47,15 +52,21 @@ module.exports = function (fileName, opt) {
 			}));
 		}
 
+		// Set first file
 		if (!firstFile) {
 			firstFile = file;
 		}
 
+		// Save buffer for later use
 		opt.files.push(file);
 	}
 
 	function generateModernizr() {
+
+		// Call customizr
 		customizr(opt, function (data) {
+
+			// Sanity check
 			if (!data.result) {
 				return stream.emit("error", new gutil.PluginError({
 					plugin: PLUGIN_NAME,
@@ -63,6 +74,7 @@ module.exports = function (fileName, opt) {
 				}));
 			}
 
+			// Save result
 			var file = new gutil.File({
 				path: path.join(firstFile.base, fileName),
 				base: firstFile.base,
@@ -70,7 +82,10 @@ module.exports = function (fileName, opt) {
 				contents: new Buffer(data.result)
 			});
 
+			// Pass data along
 			stream.queue(file);
+
+			// Clear the queue
 			stream.queue(null);
 		});
 	}
