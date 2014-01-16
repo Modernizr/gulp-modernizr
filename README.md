@@ -23,6 +23,7 @@ var modernizr = require('gulp-modernizr');
 gulp.task('modernizr', function() {
   gulp.src('./js/*.js')
     .pipe(modernizr());
+    .pipe(dest("build/"))
 });
 ```
 
