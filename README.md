@@ -1,5 +1,7 @@
+<!---
 # gulp-modernizr [![NPM version][modernizr-npm-image]][modernizr-npm-url] [![Build status][modernizr-travis-image]][modernizr-travis-url]
 > Modernizr plugin for Gulp
+-->
 
 ## Usage
 
@@ -22,20 +24,6 @@ gulp.task('modernizr', function() {
 
 ## API
 
-### modernizr(options)
-
-#### options
-Type: `Object`
-
-You can pass options as an object. See the [list of available options](#link-to-customizr-repo) for valid options.
-
-```javascript
-gulp.src('./js/*.js')
-  .pipe(modernizr({
-    excludeTests: ['csstransforms3d']
-  }));
-```
-
 ### modernizr(fileName)
 
 #### fileName
@@ -46,6 +34,20 @@ You can optionally pass a fileName to name the Modernizr file (defaults to 'mode
 ```javascript
 gulp.src('./js/*.js')
   .pipe(modernizr('modernizr-custom.js'));
+```
+
+### modernizr(/*fileName, */ settings)
+
+#### settings
+Type: `Object`
+
+You can pass settings as an object. See the [list of available settings](https://github.com/doctyper/customizr) for valid settings.
+
+```javascript
+gulp.src('./js/*.js')
+  .pipe(modernizr({
+    excludeTests: ['csstransforms3d']
+  }));
 ```
 
 <!---
