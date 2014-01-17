@@ -1,10 +1,11 @@
-<!---
-# gulp-modernizr [![NPM version][modernizr-npm-image]][modernizr-npm-url] [![Build status][modernizr-travis-image]][modernizr-travis-url]
-> Modernizr plugin for Gulp
--->
-[![Build Status](https://travis-ci.org/doctyper/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/doctyper/gulp-modernizr)
-
 # gulp-modernizr
+
+[![Build Status](https://secure.travis-ci.org/doctyper/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/doctyper/gulp-modernizr)
+
+<!--- TODO: SOON
+[![NPM](https://nodei.co/npm/gulp-modernizr.png?compact=true)](https://nodei.co/npm/gulp-modernizr/)
+-->
+
 A [Gulp](http://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
 ## Usage
