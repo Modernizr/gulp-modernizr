@@ -1,6 +1,6 @@
 var path = require("path"),
 	gutil = require("gulp-util"),
-	through = require("through"),
+	through = require("through2"),
 	customizr = require("customizr");
 
 module.exports = function (fileName, opt) {
@@ -32,12 +32,12 @@ module.exports = function (fileName, opt) {
 
 	// Per Gulp docs (https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md)
 	// "Your plugin shouldn't do things that other plugins are responsible for"
-	opt.uglify = opt.uglify || false;
+	opt.uglify = false;
 
 	// Save first file for metadata purposes
 	var firstFile;
 
-	function storeBuffers(file) {
+	function storeBuffers(file, enc, callback) {
 
 		// Return if null
 		if (file.isNull()) {
@@ -59,6 +59,8 @@ module.exports = function (fileName, opt) {
 
 		// Save buffer for later use
 		opt.files.push(file);
+
+		callback();
 	}
 
 	function generateModernizr() {
@@ -83,13 +85,10 @@ module.exports = function (fileName, opt) {
 			});
 
 			// Pass data along
-			stream.queue(file);
-
-			// Clear the queue
-			stream.queue(null);
+			stream.push(file);
 		});
 	}
 
-	var stream = through(storeBuffers, generateModernizr);
+	var stream = through.obj(storeBuffers, generateModernizr);
 	return stream;
 };
