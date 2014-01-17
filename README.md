@@ -60,7 +60,7 @@ gulp.src('./js/*.js')
 ##### See the [customizr repository](https://github.com/doctyper/customizr#config-file) for valid settings.
 
 #### `settings.uglify`
-Per the [Gulp guidelines](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md), the option to uglify the build is disabled for this plugin. You may use [`gulp-uglify`](https://npmjs.org/package/gulp-uglify) to retain this functionality in Gulp:
+Per the [Gulp guidelines](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md), the option to uglify the build goes against guidelines #1 and #3. Thus, this setting has been removed from this plugin. You may use [`gulp-uglify`](https://npmjs.org/package/gulp-uglify) to achieve this functionality in Gulp:
 
 ```javascript
 gulp.src('./js/*.js')
