@@ -58,6 +58,16 @@ gulp.src('./js/*.js')
 #### Available Settings
 ##### See the [customizr repository](https://github.com/doctyper/customizr#config-file) for valid settings.
 
+#### `settings.uglify`
+Per the [Gulp guidelines](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md), the option to uglify the build is disabled for this plugin. You may use [`gulp-uglify`](https://npmjs.org/package/gulp-uglify) to retain this functionality in Gulp:
+
+```javascript
+gulp.src('./js/*.js')
+  .pipe(modernizr())
+  .pipe(uglify())
+  .pipe(dest("build/"));
+```
+
 [modernizr-travis-url]: http://travis-ci.org/doctyper/gulp-modernizr
 [modernizr-travis-image]: https://secure.travis-ci.org/doctyper/gulp-modernizr.png?branch=master
 <!---
