@@ -28,7 +28,9 @@ module.exports = function (fileName, opt) {
 	opt.crawl = false;
 
 	// Reset opt.files. Store buffers here.
-	opt.files = [];
+	opt.files = {
+		src: []
+	};
 
 	// Per Gulp docs (https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md)
 	// "Your plugin shouldn't do things that other plugins are responsible for"
@@ -58,7 +60,7 @@ module.exports = function (fileName, opt) {
 		}
 
 		// Save buffer for later use
-		opt.files.push(file);
+		opt.files.src.push(file);
 
 		callback();
 	}
