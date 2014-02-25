@@ -23,8 +23,8 @@ var modernizr = require('gulp-modernizr');
 
 gulp.task('modernizr', function() {
   gulp.src('./js/*.js')
-    .pipe(modernizr());
-    .pipe(dest("build/"))
+    .pipe(modernizr())
+    .pipe(gulp.dest("build/"))
 });
 ```
 
@@ -66,7 +66,7 @@ Per the [Gulp guidelines](https://github.com/gulpjs/gulp/blob/master/docs/writin
 gulp.src('./js/*.js')
   .pipe(modernizr())
   .pipe(uglify())
-  .pipe(dest("build/"));
+  .pipe(gulp.dest("build/"));
 ```
 
 [modernizr-travis-url]: http://travis-ci.org/doctyper/gulp-modernizr
