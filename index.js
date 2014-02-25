@@ -67,6 +67,10 @@ module.exports = function (fileName, opt) {
 
 	function generateModernizr() {
 
+		if (opt.files.src.length === 0) {
+			return;
+		}
+
 		// Call customizr
 		customizr(opt, function (data) {
 
