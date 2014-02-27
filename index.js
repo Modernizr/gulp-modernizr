@@ -12,7 +12,7 @@ module.exports = function (fileName, opt) {
 
 	// Ensure fileName exists
 	if (typeof fileName === "undefined") {
-		fileName = DEFAULT_FILE_NAME;
+		fileName = opt ? opt.dest : DEFAULT_FILE_NAME;
 	} else if (typeof fileName === typeof {}) {
 		opt = fileName;
 		fileName = DEFAULT_FILE_NAME;
