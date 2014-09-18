@@ -31,5 +31,8 @@
     "assert": "~1.1.0",
     "mocha": "~1.17.0",
     "gulp": "~3.5.1"
+  },
+  "peerDependencies": {
+    "modernizr": "https://github.com/robwierzbowski/Modernizr/tarball/rw/new-build-sys"
   }
 }
