@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/doctyper/gulp-modernizr",
   "dependencies": {
-    "customizr": "https://github.com/doctyper/customizr/tarball/develop",
+    "customizr": "https://github.com/doctyper/customizr/tarball/feature/modernizr-as-peer-dependency",
     "gulp-util": "~2.2.10",
     "through2": "~0.4.0"
   },
@@ -33,6 +33,6 @@
     "gulp": "~3.5.1"
   },
   "peerDependencies": {
-    "modernizr": "https://github.com/robwierzbowski/Modernizr/tarball/rw/new-build-sys"
+    "modernizr": "https://github.com/Modernizr/Modernizr/tarball/master"
   }
 }
