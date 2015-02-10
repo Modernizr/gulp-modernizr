@@ -8,6 +8,8 @@
 
 A [Gulp](http://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
+*Note*: This plugin uses version 3 of Modernizr. Version 3 is a complete rewrite of the library and is not yet officially released. Make sure to check the [Github repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects) for the correct feature names (example: ```Modernizr.touch``` was renamed to ```Modernizr.touchevents```).
+
 ## Usage
 
 First, install `gulp-modernizr` as a development dependency:
