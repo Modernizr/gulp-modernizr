@@ -25,7 +25,7 @@
     "customizr": "^1.0.0-alpha",
     "grunt-legacy-log": "~0.1.1",
     "plugin-error": "^0.1.2",
-    "through2": "~0.4.0",
+    "through2": "^2.0.3",
     "vinyl": "^2.1.0"
   },
   "devDependencies": {
