@@ -2,7 +2,7 @@
 
 var fs = require("fs"),
 	assert = require("assert"),
-	gutil = require("gulp-util"),
+	Vinyl =require('vinyl'),
 	modernizr = require("../");
 
 describe("gulp-modernizr", function () {
@@ -20,7 +20,7 @@ describe("gulp-modernizr", function () {
 				done();
 			});
 
-			stream.write(new gutil.File({
+			stream.write(new Vinyl({
 				path: TEST_PATH,
 				contents: fs.readFileSync(TEST_PATH)
 			}));

@@ -1,5 +1,6 @@
 var path = require("path"),
-	gutil = require("gulp-util"),
+	PluginError = require('plugin-error'),
+	Vinyl = require('vinyl'),
 	through = require("through2"),
 	customizr = require("customizr");
 
@@ -49,7 +50,7 @@ module.exports = function (fileName, opt) {
 
 		// No stream support (yet?)
 		if (file.isStream()) {
-			stream.emit("error", new gutil.PluginError({
+			stream.emit("error", new PluginError({
 				plugin: PLUGIN_NAME,
 				message: "Streaming not supported"
 			}));
@@ -78,14 +79,14 @@ module.exports = function (fileName, opt) {
 
 			// Sanity check
 			if (!data.result) {
-				return stream.emit("error", new gutil.PluginError({
+				return stream.emit("error", new PluginError({
 					plugin: PLUGIN_NAME,
 					message: "No data returned"
 				}));
 			}
 
 			// Save result
-			var file = new gutil.File({
+			var file = new Vinyl({
 				path: path.join(firstFile.base, fileName),
 				base: firstFile.base,
 				cwd: firstFile.cwd,
