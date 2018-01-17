@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/doctyper/gulp-modernizr.git"
+    "url": "https://github.com/rejas/gulp-modernizr.git"
   },
   "keywords": [
     "gulpplugin",
@@ -18,9 +18,9 @@
   "author": "Richard Herrera",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/doctyper/gulp-modernizr/issues"
+    "url": "https://github.com/rejas/gulp-modernizr/issues"
   },
-  "homepage": "https://github.com/doctyper/gulp-modernizr",
+  "homepage": "https://github.com/rejas/gulp-modernizr",
   "dependencies": {
     "customizr": "^1.0.0-alpha",
     "grunt-legacy-log": "~0.1.1",

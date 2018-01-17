@@ -1,6 +1,6 @@
 # gulp-modernizr
 
-[![Build Status](https://secure.travis-ci.org/doctyper/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/doctyper/gulp-modernizr)
+[![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
 
 <!--- TODO: SOON
 [![NPM](https://nodei.co/npm/gulp-modernizr.png?compact=true)](https://nodei.co/npm/gulp-modernizr/)
@@ -71,8 +71,8 @@ gulp.src('./js/*.js')
   .pipe(gulp.dest("build/"));
 ```
 
-[modernizr-travis-url]: http://travis-ci.org/doctyper/gulp-modernizr
-[modernizr-travis-image]: https://secure.travis-ci.org/doctyper/gulp-modernizr.png?branch=master
+[modernizr-travis-url]: http://travis-ci.org/rejas/gulp-modernizr
+[modernizr-travis-image]: https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master
 <!---
 [modernizr-npm-url]: https://npmjs.org/package/gulp-modernizr
 [modernizr-npm-image]: https://badge.fury.io/js/gulp-modernizr.png
