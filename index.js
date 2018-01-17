@@ -1,17 +1,18 @@
-var path = require("path"),
-	gutil = require("gulp-util"),
-	through = require("through2"),
-	customizr = require("customizr");
+var path = require('path'),
+	PluginError = require('plugin-error'),
+	Vinyl = require('vinyl'),
+	through = require('through2'),
+	customizr = require('customizr');
 
 module.exports = function (fileName, opt) {
-	"use strict";
+	'use strict';
 
 	// Set some defaults
-	var PLUGIN_NAME = "gulp-modernizr",
-		DEFAULT_FILE_NAME = "modernizr.js";
+	var PLUGIN_NAME = 'gulp-modernizr',
+		DEFAULT_FILE_NAME = 'modernizr.js';
 
 	// Ensure fileName exists
-	if (typeof fileName === "undefined") {
+	if (typeof fileName === 'undefined') {
 		fileName = opt ? opt.dest : DEFAULT_FILE_NAME;
 	} else if (typeof fileName === typeof {}) {
 		opt = fileName;
@@ -49,9 +50,9 @@ module.exports = function (fileName, opt) {
 
 		// No stream support (yet?)
 		if (file.isStream()) {
-			stream.emit("error", new gutil.PluginError({
+			stream.emit('error', new PluginError({
 				plugin: PLUGIN_NAME,
-				message: "Streaming not supported"
+				message: 'Streaming not supported'
 			}));
 
 			return callback();
@@ -78,14 +79,14 @@ module.exports = function (fileName, opt) {
 
 			// Sanity check
 			if (!data.result) {
-				return stream.emit("error", new gutil.PluginError({
+				return stream.emit('error', new PluginError({
 					plugin: PLUGIN_NAME,
-					message: "No data returned"
+					message: 'No data returned'
 				}));
 			}
 
 			// Save result
-			var file = new gutil.File({
+			var file = new Vinyl({
 				path: path.join(firstFile.base, fileName),
 				base: firstFile.base,
 				cwd: firstFile.cwd,

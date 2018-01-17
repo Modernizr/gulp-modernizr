@@ -2,13 +2,11 @@
 
 [![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
 
-<!--- TODO: SOON
 [![NPM](https://nodei.co/npm/gulp-modernizr.png?compact=true)](https://nodei.co/npm/gulp-modernizr/)
--->
 
 A [Gulp](http://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
-*Note*: This plugin uses version 3 of Modernizr. Version 3 is a complete rewrite of the library and is not yet officially released. Make sure to check the [Github repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects) for the correct feature names (example: ```Modernizr.touch``` was renamed to ```Modernizr.touchevents```).
+*Note*: This plugin uses version 3 of Modernizr. Make sure to check the [Github repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects) for the correct feature names (example: ```Modernizr.touch``` was renamed to ```Modernizr.touchevents```).
 
 ## Usage
 
@@ -24,7 +22,7 @@ Then, add it to your `gulpfile.js`:
 var modernizr = require('gulp-modernizr');
 
 gulp.task('modernizr', function() {
-  gulp.src('./js/*.js')
+  return gulp.src('./js/*.js')
     .pipe(modernizr())
     .pipe(gulp.dest("build/"))
 });
@@ -73,10 +71,8 @@ gulp.src('./js/*.js')
 
 [modernizr-travis-url]: http://travis-ci.org/rejas/gulp-modernizr
 [modernizr-travis-image]: https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master
-<!---
 [modernizr-npm-url]: https://npmjs.org/package/gulp-modernizr
 [modernizr-npm-image]: https://badge.fury.io/js/gulp-modernizr.png
--->
 
 ## License
 Copyright (c) 2013 Richard Herrera

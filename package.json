@@ -23,14 +23,15 @@
   "homepage": "https://github.com/rejas/gulp-modernizr",
   "dependencies": {
     "customizr": "^1.0.0-alpha",
-    "grunt-legacy-log": "~0.1.1",
-    "gulp-util": "~2.2.10",
-    "through2": "~0.4.0"
+    "grunt-legacy-log": "^1.0.0",
+    "plugin-error": "^1.0.0",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
   },
   "devDependencies": {
-    "event-stream": "~3.1.0",
-    "assert": "~1.1.0",
-    "mocha": "~1.17.0",
-    "gulp": "~3.5.1"
+    "assert": "^1.4.1",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "mocha": "^4.1.0"
   }
 }
