@@ -22,7 +22,7 @@ Then, add it to your `gulpfile.js`:
 var modernizr = require('gulp-modernizr');
 
 gulp.task('modernizr', function() {
-  gulp.src('./js/*.js')
+  return gulp.src('./js/*.js')
     .pipe(modernizr())
     .pipe(gulp.dest("build/"))
 });
