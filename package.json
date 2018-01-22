@@ -23,7 +23,6 @@
   "homepage": "https://github.com/rejas/gulp-modernizr",
   "dependencies": {
     "customizr": "^1.0.0-alpha",
-    "grunt-legacy-log": "^1.0.0",
     "plugin-error": "^1.0.0",
     "through2": "^2.0.3",
     "vinyl": "^2.1.0"
@@ -32,6 +31,6 @@
     "assert": "^1.4.1",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
-    "mocha": "^4.1.0"
+    "mocha": "^5.0.0"
   }
 }
