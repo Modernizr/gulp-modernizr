@@ -4,6 +4,7 @@
   "description": "Gulp wrapper for custom Modernizr builds",
   "main": "index.js",
   "scripts": {
+    "lint": "node ./node_modules/jshint/bin/jshint index.js",
     "test": "node test/runner.js"
   },
   "repository": {
@@ -31,6 +32,7 @@
     "assert": "^1.4.1",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
+    "jshint": "^2.9.5",
     "mocha": "^5.0.0"
   }
 }
