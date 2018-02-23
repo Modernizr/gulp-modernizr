@@ -2,26 +2,27 @@
   "name": "gulp-modernizr",
   "version": "2.0.0",
   "description": "Gulp wrapper for custom Modernizr builds",
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "lint": "node ./node_modules/jshint/bin/jshint index.js",
-    "test": "node test/runner.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rejas/gulp-modernizr.git"
+  "homepage": "https://github.com/rejas/gulp-modernizr",
+  "bugs": "https://github.com/rejas/gulp-modernizr/issues",
+  "author": {
+    "name": "Veeck",
+    "url": "https://github.com/rejas"
   },
   "keywords": [
     "gulpplugin",
     "modernizr",
     "customizr"
   ],
-  "author": "Richard Herrera",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rejas/gulp-modernizr/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rejas/gulp-modernizr.git"
   },
-  "homepage": "https://github.com/rejas/gulp-modernizr",
+  "scripts": {
+    "lint": "node ./node_modules/jshint/bin/jshint index.js",
+    "test": "node test/runner.js"
+  },
   "dependencies": {
     "customizr": "^1.0.0-alpha",
     "plugin-error": "^1.0.1",
@@ -33,6 +34,6 @@
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "jshint": "^2.9.5",
-    "mocha": "^5.0.0"
+    "mocha": "^5.0.1"
   }
 }
