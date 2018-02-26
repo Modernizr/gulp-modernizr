@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/gulp-modernizr.png?compact=true)](https://nodei.co/npm/gulp-modernizr/)
 
-A [Gulp](http://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
+A [Gulp](https://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
 *Note*: This plugin uses version 3 of Modernizr. Make sure to check the [Github repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects) for the correct feature names (example: ```Modernizr.touch``` was renamed to ```Modernizr.touchevents```).
 
@@ -91,7 +91,7 @@ gulp.src('./js/*.js')
   .pipe(gulp.dest("build/"));
 ```
 
-[modernizr-travis-url]: http://travis-ci.org/rejas/gulp-modernizr
+[modernizr-travis-url]: https://travis-ci.org/rejas/gulp-modernizr
 [modernizr-travis-image]: https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master
 [modernizr-npm-url]: https://npmjs.org/package/gulp-modernizr
 [modernizr-npm-image]: https://badge.fury.io/js/gulp-modernizr.png
