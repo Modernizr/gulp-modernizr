@@ -26,9 +26,17 @@ var modernizr = require('gulp-modernizr');
 gulp.task('modernizr', function() {
   return gulp.src('./js/*.js')
     .pipe(modernizr())
-    .pipe(gulp.dest("build/"))
+    .pipe(gulp.dest('build/'))
 });
 ```
+
+Running the plugin will search for tests in your `src` files like this one for example:
+
+```javascript
+if (!Modernizr.objectfit) { doSomethingLikeCallAPolyfill(); }
+```
+
+and in this case add the 'objectfit' test to the ouptut file.
 
 ## API
 
