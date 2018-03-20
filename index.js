@@ -40,6 +40,9 @@ module.exports = function (fileName, opt) {
 	// Save first file for metadata purposes
 	var firstFile;
 
+	//
+	var stream;
+
 	function storeBuffers(file, enc, callback) {
 
 		// Return if null
@@ -100,6 +103,6 @@ module.exports = function (fileName, opt) {
 		});
 	}
 
-	var stream = through.obj(storeBuffers, generateModernizr);
+	stream = through.obj(storeBuffers, generateModernizr);
 	return stream;
 };
