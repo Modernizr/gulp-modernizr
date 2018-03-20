@@ -105,5 +105,5 @@ gulp.src('./js/*.js')
 [modernizr-npm-image]: https://badge.fury.io/js/gulp-modernizr.png
 
 ## License
-Copyright (c) 2013 Richard Herrera
+Copyright (c) 2018 Veeck
 Licensed under the MIT license.
