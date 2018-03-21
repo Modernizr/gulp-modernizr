@@ -2,12 +2,11 @@
 
 var fs = require("fs"),
 	assert = require("assert"),
-	Vinyl =require('vinyl'),
+	Vinyl = require("vinyl"),
 	modernizr = require("../");
 
 describe("gulp-modernizr", function () {
 	describe("in buffer mode", function () {
-
 		it("should generate a custom Modernizr file", function (done) {
 
 			var stream = modernizr(),
@@ -28,6 +27,5 @@ describe("gulp-modernizr", function () {
 			stream.end();
 
 		});
-
 	});
 });
