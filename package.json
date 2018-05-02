@@ -4,24 +4,11 @@
   "description": "Gulp wrapper for custom Modernizr builds",
   "license": "MIT",
   "main": "index.js",
-  "homepage": "https://github.com/rejas/gulp-modernizr",
+  "homepage": "https://github.com/rejas/gulp-modernizr#readme",
   "bugs": "https://github.com/rejas/gulp-modernizr/issues",
   "author": {
-    "name": "Veeck",
+    "name": "rejas",
     "url": "https://github.com/rejas"
-  },
-  "keywords": [
-    "gulpplugin",
-    "modernizr",
-    "customizr"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rejas/gulp-modernizr.git"
-  },
-  "scripts": {
-    "lint": "node ./node_modules/jshint/bin/jshint index.js",
-    "test": "node test/runner.js"
   },
   "dependencies": {
     "customizr": "^1.0.0-alpha",
@@ -35,5 +22,18 @@
     "gulp": "^3.9.1",
     "jshint": "^2.9.5",
     "mocha": "^5.1.1"
+  },
+  "keywords": [
+    "gulpplugin",
+    "modernizr",
+    "customizr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rejas/gulp-modernizr.git"
+  },
+  "scripts": {
+    "lint": "jshint ./index.js",
+    "test": "mocha test/runner.js"
   }
 }
