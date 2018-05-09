@@ -33,7 +33,11 @@ module.exports = function (fileName, opt) {
 		src: []
 	};
 
-	// Save first file for metadata purposes
+    // Per Gulp docs (https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md)
+    // "Your plugin shouldn't do things that other plugins are responsible for"
+    opt.uglify = false;
+    
+    // Save first file for metadata purposes
 	var firstFile;
 
 	//
