@@ -1,6 +1,6 @@
 {
   "name": "gulp-modernizr",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Gulp wrapper for custom Modernizr builds",
   "homepage": "https://github.com/rejas/gulp-modernizr#readme",
   "license": "MIT",
