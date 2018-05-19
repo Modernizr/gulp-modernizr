@@ -1,8 +1,4 @@
-# gulp-modernizr
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/rejas/gulp-modernizr.svg)](https://greenkeeper.io/)
-
-[![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
+# gulp-modernizr [![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
 
 [![NPM](https://nodei.co/npm/gulp-modernizr.png?compact=true)](https://nodei.co/npm/gulp-modernizr/)
 
