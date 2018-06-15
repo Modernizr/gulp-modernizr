@@ -1,12 +1,12 @@
 {
   "name": "gulp-modernizr",
-  "version": "2.0.4",
   "description": "Gulp wrapper for custom Modernizr builds",
-  "homepage": "https://github.com/rejas/gulp-modernizr#readme",
+  "version": "2.0.4",
   "license": "MIT",
-  "bugs": "https://github.com/rejas/gulp-modernizr/issues",
-  "repository": "https://github.com/rejas/gulp-modernizr.git",
   "main": "index.js",
+  "bugs": "https://github.com/rejas/gulp-modernizr/issues",
+  "homepage": "https://github.com/rejas/gulp-modernizr#readme",
+  "repository": "https://github.com/rejas/gulp-modernizr.git",
   "author": {
     "name": "rejas",
     "url": "https://github.com/rejas"
@@ -23,6 +23,9 @@
     "gulp": "^4.0.0",
     "jshint": "^2.9.5",
     "mocha": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   },
   "keywords": [
     "gulpplugin",
