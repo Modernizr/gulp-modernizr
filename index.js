@@ -93,7 +93,7 @@ module.exports = function (fileName, opt) {
 				path: path.join(firstFile.base, fileName),
 				base: firstFile.base,
 				cwd: firstFile.cwd,
-				contents: new Buffer(data.result)
+				contents: Buffer.from(data.result)
 			});
 
 			// Pass data along
