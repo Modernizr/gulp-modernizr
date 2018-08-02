@@ -25,7 +25,6 @@ describe("gulp-modernizr", function () {
 			}));
 
 			stream.end();
-
 		});
 	});
 });
