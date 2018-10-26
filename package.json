@@ -19,9 +19,10 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
+    "eslint": "^5.8.0",
+    "eslint-config-gulp": "^3.0.1",
     "event-stream": "^4.0.1",
     "gulp": "^4.0.0",
-    "jshint": "^2.9.6",
     "mocha": "^5.2.0"
   },
   "engines": {
@@ -34,7 +35,7 @@
     "customizr"
   ],
   "scripts": {
-    "lint": "jshint ./index.js",
+    "lint": "eslint --fix **/*.js",
     "test": "mocha test/runner.js"
   }
 }
