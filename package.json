@@ -12,16 +12,16 @@
     "url": "https://github.com/rejas"
   },
   "dependencies": {
-    "customizr": "^1.0.0",
+    "customizr": "^1.1.0",
     "plugin-error": "^1.0.1",
-    "through2": "^2.0.3",
+    "through2": "^3.0.0",
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "event-stream": "^3.3.4",
+    "eslint": "^5.9.0",
+    "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.0",
-    "jshint": "^2.9.5",
     "mocha": "^5.2.0"
   },
   "engines": {
@@ -34,7 +34,7 @@
     "customizr"
   ],
   "scripts": {
-    "lint": "jshint ./index.js",
+    "lint": "eslint --fix **/*.js",
     "test": "mocha test/runner.js"
   }
 }
