@@ -22,7 +22,7 @@
     "eslint": "^5.9.0",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.0",
-    "mocha": "^5.2.0"
+    "mocha": "^6.0.0"
   },
   "engines": {
     "node": ">=6.0.0"
