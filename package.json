@@ -12,17 +12,17 @@
     "url": "https://github.com/rejas"
   },
   "dependencies": {
-    "customizr": "^1.1.0",
+    "customizr": "https://github.com/Modernizr/customizr.git#develop",
     "plugin-error": "^1.0.1",
-    "through2": "^3.0.0",
+    "through2": "^3.0.1",
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "eslint": "^5.9.0",
+    "eslint": "^5.15.0",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.0",
-    "mocha": "^6.0.0"
+    "mocha": "^6.0.2"
   },
   "engines": {
     "node": ">=6.0.0"
