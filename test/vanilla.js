@@ -1,5 +1,3 @@
-/* jshint sub: true */
-
 var Modernizr = window.Modernizr;
 
 var tests = {
