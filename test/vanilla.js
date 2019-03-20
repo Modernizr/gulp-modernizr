@@ -1,5 +1,6 @@
 var Modernizr = window.Modernizr;
 
+/* eslint-disable no-unused-vars */
 var tests = {
   standalone: {
     applicationcache: Modernizr.applicationcache,

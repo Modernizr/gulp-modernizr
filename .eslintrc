@@ -1,3 +1,7 @@
 {
-	"extends": "gulp"
+  "extends": "gulp",
+  "env": {
+    "browser": true,
+    "mocha": true
+  }
 }

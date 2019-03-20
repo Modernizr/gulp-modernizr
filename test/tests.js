@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var assert = require('assert');
+var assert = require('chai').assert;
 var Vinyl = require('vinyl');
 var modernizr = require('../');
 
