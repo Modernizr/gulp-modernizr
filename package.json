@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.0",
     "mocha": "^6.0.2"
@@ -34,7 +34,8 @@
     "customizr"
   ],
   "scripts": {
-    "lint": "eslint --fix **/*.js",
+    "eslint": "eslint *.js test/*.js",
+    "eslint:fix": "eslint --fix *.js test/*.js",
     "test": "mocha test/runner.js"
   }
 }
