@@ -4,20 +4,28 @@ var fs = require('fs');
 var assert = require('chai').assert;
 var Vinyl = require('vinyl');
 var gs = require('glob-stream');
+var gulp = require('gulp');
 var modernizr = require('../');
 
 describe('gulp-modernizr', function() {
   describe('in buffer mode', function() {
     it('should generate a custom Modernizr file', function(done) {
 
-      var stream = modernizr();
-
       var TEST_PATH = __dirname + '/vanilla.js';
+
+      var stream = gulp.src(TEST_PATH).pipe(modernizr(
+          'modernizr.js', {
+              'tests': ['history'],
+              'excludeTests': ['dart'],
+              'options': ['setClasses', 'html5printshiv']
+          }
+      ));
 
       stream.on('data', function(file) {
         assert.notEqual(-1, String(file.path).indexOf('modernizr.js'));
-        assert.notEqual(-1, String(file.contents).indexOf('Modernizr'));
-
+        assert.notEqual(-1, String(file.contents.toString()).indexOf('Modernizr'));
+        assert.equal(-1, String(file.contents.toString()).indexOf('dart'));
+        assert.notEqual(-1, String(file.contents.toString()).indexOf('html5printshiv'));
         done();
       });
 
