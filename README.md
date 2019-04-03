@@ -58,8 +58,16 @@ You can pass settings as an object. See the [customizr repository](https://githu
 ```javascript
 gulp.src('./js/*.js')
   .pipe(modernizr({
-    excludeTests: ['csstransforms3d']
-  }));
+        'options': ['setClasses'],
+        'tests': [
+            'webworkers',
+            [
+                'cssgrid',
+                'cssgridlegacy'
+            ]
+        ],
+        excludeTests: ['csstransforms3d']
+    }));
 ```
 
 The 'settings' object can also be required from a JSON file:
@@ -67,8 +75,15 @@ The 'settings' object can also be required from a JSON file:
 modernizr-config.json:
 ```javascript
 {
-        'options': ['setClasses'],
-        'tests': ['webworkers']
+  'options': ['setClasses'],
+  'tests': [
+      'webworkers',
+      [
+          'cssgrid',
+          'cssgridlegacy'
+      ]
+  ],
+  excludeTests: ['csstransforms3d']
 }
 ```
 
