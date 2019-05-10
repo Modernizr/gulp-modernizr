@@ -22,6 +22,8 @@ module.exports = function(fileName, opt) {
   // Ensure opt exists
   opt = opt || {};
 
+  var crawlFiles = opt.crawl;
+
   // Enable string parsing in customizr
   opt.useBuffers = true;
 
@@ -38,8 +40,7 @@ module.exports = function(fileName, opt) {
   opt.uglify = false;
 
   // Save first file for metadata purposes
-  var firstFile,
-    stream;
+  var stream;
 
   function storeBuffers(file, enc, callback) {
 
@@ -59,11 +60,6 @@ module.exports = function(fileName, opt) {
       return callback();
     }
 
-    // Set first file
-    if (!firstFile) {
-      firstFile = file;
-    }
-
     // Save buffer for later use
     opt.files.src.push(file);
 
@@ -71,8 +67,13 @@ module.exports = function(fileName, opt) {
   }
 
   function generateModernizr(callback) {
-    if (opt.files.src.length === 0) {
+    if (crawlFiles && opt.files.src.length === 0) {
       return callback();
+    }
+
+    // Remove files if crawl is set to false
+    if (!crawlFiles) {
+      opt.files.src = [];
     }
 
     // Call customizr
@@ -88,9 +89,9 @@ module.exports = function(fileName, opt) {
 
       // Save result
       var file = new Vinyl({
-        path: path.join(firstFile.base, fileName),
-        base: firstFile.base,
-        cwd: firstFile.cwd,
+        path: fileName,
+        base: undefined,
+        cwd: '',
         contents: Buffer.from(data.result),
       });
 

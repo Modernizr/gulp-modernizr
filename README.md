@@ -97,11 +97,8 @@ gulp.src('./js/*.js')
 #### Available Settings
 ##### See the [customizr repository](https://github.com/Modernizr/customizr#config-file) for valid settings.
 
-#### `settings.crawl`
-Currently not passed on to customizr, see [issue #36](https://github.com/rejas/gulp-modernizr/issues/36) 
-
 #### `settings.quiet`
-Defaults to false, setting it to true suppresses any log output from customizr
+Defaults to `false`, setting it to `true` suppresses any log output from customizr
 
 #### `settings.uglify`
 Will never be passed to customizr, see the [Gulp guidelines](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md). The option to uglify the build goes against guidelines #1 and #3. Thus, this setting has been removed from this plugin. You may use [`gulp-uglify`](https://npmjs.org/package/gulp-uglify) to achieve this functionality in Gulp:
