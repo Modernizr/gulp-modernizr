@@ -21,7 +21,7 @@ module.exports = function(fileName, opt) {
   // Ensure opt exists
   opt = opt || {};
 
-  var crawlFiles = opt.crawl;
+  var crawlFiles = opt.hasOwnProperty('crawl') ? opt.crawl : true;
 
   // Enable string parsing in customizr
   opt.useBuffers = true;
