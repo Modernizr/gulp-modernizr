@@ -1,4 +1,3 @@
-var path = require('path');
 var PluginError = require('plugin-error');
 var Vinyl = require('vinyl');
 var through = require('through2');
