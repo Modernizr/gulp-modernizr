@@ -41,7 +41,7 @@ and in this case add the 'objectfit' test to the ouptut file.
 #### fileName
 Type: `String`
 
-You can optionally pass a fileName to name the Modernizr file (defaults to 'modernizr.js')
+You can optionally pass a fileName to name the Modernizr file (defaults to `modernizr.js`)
 
 ```javascript
 gulp.src('./js/*.js')
@@ -96,6 +96,21 @@ gulp.src('./js/*.js')
 
 #### Available Settings
 ##### See the [customizr repository](https://github.com/Modernizr/customizr#config-file) for valid settings.
+
+#### `settings.crawl`
+
+- If set to `true`, customizr will crawl your file for tests and add them to your Modernizr file
+- If set to `false`, customizr will not crawl your files. If you specified custom tests, they will be added to your Modernizr file
+- If you just want to output a Modernizr file without crawling any file, pass a fake string as gulp source:
+
+```javascript
+gulp.src('fake', {allowEmpty: true})
+  .pipe(modernizr({
+    ...settings
+  }))
+
+```
+
 
 #### `settings.quiet`
 Defaults to `false`, setting it to `true` suppresses any log output from customizr

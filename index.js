@@ -38,7 +38,6 @@ module.exports = function(fileName, opt) {
   // "Your plugin shouldn't do things that other plugins are responsible for"
   opt.uglify = false;
 
-  // Save first file for metadata purposes
   var stream;
 
   function storeBuffers(file, enc, callback) {
