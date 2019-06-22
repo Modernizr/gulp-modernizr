@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2",
     "mocha": "^6.1.4"
