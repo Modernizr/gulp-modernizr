@@ -97,21 +97,6 @@ gulp.src('./js/*.js')
 #### Available Settings
 ##### See the [customizr repository](https://github.com/Modernizr/customizr#config-file) for valid settings.
 
-#### `settings.crawl`
-
-- If set to `true`, customizr will crawl your file for tests and add them to your Modernizr file
-- If set to `false`, customizr will not crawl your files. If you specified custom tests, they will be added to your Modernizr file
-- If you just want to output a Modernizr file without crawling any file, pass a fake string as gulp source:
-
-```javascript
-gulp.src('fake', {allowEmpty: true})
-  .pipe(modernizr({
-    ...settings
-  }))
-
-```
-
-
 #### `settings.quiet`
 Defaults to `false`, setting it to `true` suppresses any log output from customizr
 
@@ -123,6 +108,19 @@ gulp.src('./js/*.js')
   .pipe(modernizr())
   .pipe(uglify())
   .pipe(gulp.dest("build/"));
+```
+
+#### Notes on `settings.crawl`
+
+By default, `glup-modernizr` will not ouput any `Modernizr.js` if your `gulp.src` does not return any file, regardless of the `tests` you may have set.
+
+If you only want to ouput a `Modernizr.js` file with some `tests` you set, just pass a fake path to `gulp.src`:
+
+```javascript
+gulp.src('fake', {allowEmpty: true})
+  .pipe(modernizr({
+    ...settings
+  }))
 ```
 
 [modernizr-travis-url]: https://travis-ci.org/rejas/gulp-modernizr
