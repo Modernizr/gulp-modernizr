@@ -58,16 +58,17 @@ You can pass settings as an object. See the [customizr repository](https://githu
 ```javascript
 gulp.src('./js/*.js')
   .pipe(modernizr({
-        'options': ['setClasses'],
-        'tests': [
-            'webworkers',
-            [
-                'cssgrid',
-                'cssgridlegacy'
-            ]
-        ],
-        excludeTests: ['csstransforms3d']
-    }));
+    'options': ['setClasses'],
+    'tests': [
+      'webworkers',
+      [
+        'cssgrid',
+        'cssgridlegacy'
+      ]
+    ],
+    excludeTests: ['csstransforms3d']
+  })
+);
 ```
 
 The 'settings' object can also be required from a JSON file:
@@ -97,6 +98,24 @@ gulp.src('./js/*.js')
 #### Available Settings
 ##### See the [customizr repository](https://github.com/Modernizr/customizr#config-file) for valid settings.
 
+#### `settings.crawl`
+
+By default, `glup-modernizr` will not output any `Modernizr.js` if your `gulp.src` does not contain any file, 
+regardless of the `tests` you may have set.
+
+If you only want to output a `Modernizr.js` file with some `tests` you set, just pass a fake path to `gulp.src`:
+
+```javascript
+gulp.src('fake', {allowEmpty: true})
+  .pipe(modernizr({
+    crawl: false,
+    tests: [
+      'touchevents',
+    ],
+  })
+)
+```
+
 #### `settings.quiet`
 Defaults to `false`, setting it to `true` suppresses any log output from customizr
 
@@ -108,19 +127,6 @@ gulp.src('./js/*.js')
   .pipe(modernizr())
   .pipe(uglify())
   .pipe(gulp.dest("build/"));
-```
-
-#### Notes on `settings.crawl`
-
-By default, `glup-modernizr` will not ouput any `Modernizr.js` if your `gulp.src` does not return any file, regardless of the `tests` you may have set.
-
-If you only want to ouput a `Modernizr.js` file with some `tests` you set, just pass a fake path to `gulp.src`:
-
-```javascript
-gulp.src('fake', {allowEmpty: true})
-  .pipe(modernizr({
-    ...settings
-  }))
 ```
 
 [modernizr-travis-url]: https://travis-ci.org/rejas/gulp-modernizr
