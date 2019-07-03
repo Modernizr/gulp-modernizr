@@ -1,25 +1,25 @@
 'use strict';
 
-var fs = require('fs');
-var assert = require('chai').assert;
-var Vinyl = require('vinyl');
-var gs = require('glob-stream');
-var gulp = require('gulp');
-var modernizr = require('../');
+const fs = require('fs');
+const assert = require('chai').assert;
+const Vinyl = require('vinyl');
+const gulp = require('gulp');
+const modernizr = require('../');
 
 describe('gulp-modernizr', function() {
   describe('in buffer mode', function() {
+
     it('should generate a custom Modernizr file', function(done) {
+      const TEST_PATH = __dirname + '/vanilla.js';
 
-      var TEST_PATH = __dirname + '/vanilla.js';
-
-      var stream = gulp.src(TEST_PATH).pipe(modernizr(
+      const stream = gulp.src(TEST_PATH)
+        .pipe(modernizr(
           'modernizr.js', {
-              'tests': ['history'],
-              'excludeTests': ['dart'],
-              'options': ['setClasses', 'html5printshiv']
-          }
-      ));
+            quiet: true,
+            tests: ['history'],
+            excludeTests: ['dart'],
+            options: ['setClasses', 'html5printshiv'],
+          }));
 
       stream.on('data', function(file) {
         assert.notEqual(-1, String(file.path).indexOf('modernizr.js'));
@@ -65,8 +65,7 @@ describe('gulp-modernizr', function() {
     });
 
     it('should generate a custom Modernizr file with custom tests and no source files', function(done) {
-
-      var stream = gs('fake', { allowEmpty: true })
+      const stream = gs('fake', { allowEmpty: true })
         .pipe(modernizr({
           crawl: false,
           tests: [
@@ -78,13 +77,11 @@ describe('gulp-modernizr', function() {
       stream.on('data', function(file) {
         assert.notEqual(-1, String(file.path).indexOf('modernizr.js'));
         assert.notEqual(-1, String(file.contents).indexOf('touchevents'));
-
+        assert.equal(-1, String(file.contents).indexOf('dart'));
         done();
       });
 
       stream.end();
-
     });
-
   });
 });
