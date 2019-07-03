@@ -41,7 +41,7 @@ and in this case add the 'objectfit' test to the ouptut file.
 #### fileName
 Type: `String`
 
-You can optionally pass a fileName to name the Modernizr file (defaults to 'modernizr.js')
+You can optionally pass a fileName to name the Modernizr file (defaults to `modernizr.js`)
 
 ```javascript
 gulp.src('./js/*.js')
@@ -97,11 +97,8 @@ gulp.src('./js/*.js')
 #### Available Settings
 ##### See the [customizr repository](https://github.com/Modernizr/customizr#config-file) for valid settings.
 
-#### `settings.crawl`
-Currently not passed on to customizr, see [issue #36](https://github.com/rejas/gulp-modernizr/issues/36) 
-
 #### `settings.quiet`
-Defaults to false, setting it to true suppresses any log output from customizr
+Defaults to `false`, setting it to `true` suppresses any log output from customizr
 
 #### `settings.uglify`
 Will never be passed to customizr, see the [Gulp guidelines](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md). The option to uglify the build goes against guidelines #1 and #3. Thus, this setting has been removed from this plugin. You may use [`gulp-uglify`](https://npmjs.org/package/gulp-uglify) to achieve this functionality in Gulp:
@@ -111,6 +108,19 @@ gulp.src('./js/*.js')
   .pipe(modernizr())
   .pipe(uglify())
   .pipe(gulp.dest("build/"));
+```
+
+#### Notes on `settings.crawl`
+
+By default, `glup-modernizr` will not ouput any `Modernizr.js` if your `gulp.src` does not return any file, regardless of the `tests` you may have set.
+
+If you only want to ouput a `Modernizr.js` file with some `tests` you set, just pass a fake path to `gulp.src`:
+
+```javascript
+gulp.src('fake', {allowEmpty: true})
+  .pipe(modernizr({
+    ...settings
+  }))
 ```
 
 [modernizr-travis-url]: https://travis-ci.org/rejas/gulp-modernizr
