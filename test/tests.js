@@ -33,7 +33,7 @@ describe('gulp-modernizr', function() {
 
       var stream = modernizr({
         crawl: false,
-        'tests': [
+        tests: [
           'touchevents',
         ],
       });
@@ -58,14 +58,14 @@ describe('gulp-modernizr', function() {
 
     it('should generate a custom Modernizr file with custom tests and no source files', function(done) {
 
-      var stream = gs('fake', {allowEmpty: true})
+      var stream = gs('fake', { allowEmpty: true })
         .pipe(modernizr({
           crawl: false,
-          'tests': [
+          tests: [
             'touchevents',
           ],
         })
-      );
+        );
 
       stream.on('data', function(file) {
         assert.notEqual(-1, String(file.path).indexOf('modernizr.js'));
