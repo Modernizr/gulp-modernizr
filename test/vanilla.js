@@ -25,7 +25,6 @@ var tests = {
     gamepad: Modernizr.gamepads,
     geolocation: Modernizr.geolocation,
     hashchange: Modernizr.hashchange,
-    history: Modernizr.history,
     ie8compat: Modernizr.ie8compat,
     indexedDB: Modernizr.indexeddb,
     input: Modernizr.input,

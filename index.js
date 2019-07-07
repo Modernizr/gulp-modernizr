@@ -21,13 +21,13 @@ module.exports = function(fileName, opt) {
   // Ensure opt exists
   opt = opt || {};
 
-  var crawlFiles = opt.hasOwnProperty('crawl') ? opt.crawl : true;
-
   // Enable string parsing in customizr
   opt.useBuffers = true;
 
-  // Set crawl to false, Gulp is providing files & data
-  opt.crawl = false;
+  // Ensure crawl exists
+  if (opt.crawl === undefined) {
+    opt.crawl = true;
+  }
 
   // Reset opt.files. Store buffers here.
   opt.files = {
@@ -65,12 +65,12 @@ module.exports = function(fileName, opt) {
   }
 
   function generateModernizr(callback) {
-    if (crawlFiles && opt.files.src.length === 0) {
+    if (opt.crawl && opt.files.src.length === 0) {
       return callback();
     }
 
     // Remove files if crawl is set to false
-    if (!crawlFiles) {
+    if (!opt.crawl) {
       opt.files.src = [];
     }
 
