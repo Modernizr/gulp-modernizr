@@ -108,6 +108,7 @@ describe('gulp-modernizr', function() {
       const stream = gulp.src(FAKE_TEST_PATH, { allowEmpty: true })
         .pipe(modernizr({
           crawl: false,
+          quiet: true,
           tests: [
             'touchevents',
           ],
