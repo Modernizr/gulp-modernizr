@@ -1,6 +1,7 @@
-# gulp-modernizr [![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
+# gulp-modernizr 
 
-[![NPM](https://nodei.co/npm/gulp-modernizr.png?compact=true)](https://nodei.co/npm/gulp-modernizr/)
+[![npm version](https://badge.fury.io/js/gulp-modernizr.svg)](https://badge.fury.io/js/gulp-modernizr)
+[![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
 
 A [Gulp](https://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
@@ -129,11 +130,6 @@ gulp.src('./js/*.js')
   .pipe(gulp.dest("build/"));
 ```
 
-[modernizr-travis-url]: https://travis-ci.org/rejas/gulp-modernizr
-[modernizr-travis-image]: https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master
-[modernizr-npm-url]: https://npmjs.org/package/gulp-modernizr
-[modernizr-npm-image]: https://badge.fury.io/js/gulp-modernizr.png
-
 ## License
-Copyright (c) 2018 Rejas
+Copyright (c) 2019 Rejas
 Licensed under the MIT license.
