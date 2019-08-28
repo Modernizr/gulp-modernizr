@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.0.1",
+    "eslint": "^6.2.2",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2",
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.0"
   },
   "engines": {
     "node": ">=8"
