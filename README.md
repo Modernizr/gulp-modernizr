@@ -1,7 +1,7 @@
 # gulp-modernizr 
 
 [![npm version](https://badge.fury.io/js/gulp-modernizr.svg)](https://badge.fury.io/js/gulp-modernizr)
-[![Build Status](https://secure.travis-ci.org/rejas/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/rejas/gulp-modernizr)
+[![Build Status](https://secure.travis-ci.org/Modernizr/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/Modernizr/gulp-modernizr)
 
 A [Gulp](https://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
 
@@ -131,5 +131,5 @@ gulp.src('./js/*.js')
 ```
 
 ## License
-Copyright (c) 2019 Rejas
+Copyright (c) 2020 The Modernizr team
 Licensed under the MIT license.

@@ -4,13 +4,19 @@
   "version": "3.4.0",
   "license": "MIT",
   "main": "index.js",
-  "bugs": "https://github.com/rejas/gulp-modernizr/issues",
-  "homepage": "https://github.com/rejas/gulp-modernizr#readme",
-  "repository": "https://github.com/rejas/gulp-modernizr.git",
+  "bugs": "https://github.com/Modernizr/gulp-modernizr/issues",
+  "homepage": "https://github.com/Modernizr/gulp-modernizr#readme",
+  "repository": "https://github.com/Modernizr/gulp-modernizr.git",
   "author": {
-    "name": "rejas",
-    "url": "https://github.com/rejas"
+    "name": "Modernizr",
+    "url": "https://modernizr.com/"
   },
+  "contributors": [
+    {
+      "name": "rejas",
+      "url": "https://github.com/rejas"
+    }
+  ],
   "dependencies": {
     "customizr": "^1.4.1",
     "plugin-error": "^1.0.1",
