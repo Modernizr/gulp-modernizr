@@ -1,9 +1,9 @@
 # gulp-modernizr 
 
+[![Build Status](https://github.com/Modernizr/gulp-modernizr/actions/workflows/testing.yml/badge.svg)](https://github.com/Modernizr/gulp-modernizr/actions/workflows/testing.yml)
 [![npm version](https://badge.fury.io/js/gulp-modernizr.svg)](https://badge.fury.io/js/gulp-modernizr)
-[![Build Status](https://secure.travis-ci.org/Modernizr/gulp-modernizr.png?branch=master,develop)](https://travis-ci.org/Modernizr/gulp-modernizr)
 
-A [Gulp](https://gulpjs.com/) wrapper for [Modernizr](https://github.com/doctyper/customizr).
+A [Gulp](https://gulpjs.com/) wrapper for [Modernizr](https://github.com/Modernizr/customizr).
 
 *Note*: This plugin uses version 3 of Modernizr. Make sure to check the [Github repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects) for the correct feature names (example: ```Modernizr.touch``` was renamed to ```Modernizr.touchevents```).
 
@@ -54,7 +54,7 @@ gulp.src('./js/*.js')
 #### settings
 Type: `Object`
 
-You can pass settings as an object. See the [customizr repository](https://github.com/doctyper/customizr#config-file) for valid settings.
+You can pass settings as an object. See the [customizr repository](https://github.com/Modernizr/customizr#config-file) for valid settings.
 
 ```javascript
 gulp.src('./js/*.js')
