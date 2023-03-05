@@ -131,5 +131,5 @@ gulp.src('./js/*.js')
 ```
 
 ## License
-Copyright (c) 2022 The Modernizr team
+Copyright (c) 2023 The Modernizr team
 Licensed under the MIT license.
