@@ -31,7 +31,7 @@
     "mocha": "^10.2.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "keywords": [
     "gulpplugin",
