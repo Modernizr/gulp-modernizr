@@ -18,17 +18,17 @@
     }
   ],
   "dependencies": {
-    "customizr": "^3.0.1",
+    "customizr": "^3.0.2",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2",
     "vinyl": "^3.0.0"
   },
   "devDependencies": {
-    "chai": "^4.3.7",
+    "chai": "^4.5.0",
     "eslint": "^8.47.0",
     "eslint-config-gulp": "^5.0.1",
     "gulp": "^4.0.2",
-    "mocha": "^10.2.0"
+    "mocha": "^10.8.2"
   },
   "engines": {
     "node": ">=18"
