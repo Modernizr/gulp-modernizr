@@ -27,7 +27,7 @@
     "chai": "^4.5.0",
     "eslint": "^8.57.1",
     "eslint-config-gulp": "^5.0.1",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.1",
     "mocha": "^11.7.2"
   },
   "engines": {
