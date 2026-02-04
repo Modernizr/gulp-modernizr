@@ -1,7 +1,7 @@
 {
   "name": "gulp-modernizr",
   "description": "Gulp wrapper for custom Modernizr builds",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "license": "MIT",
   "main": "index.js",
   "bugs": "https://github.com/Modernizr/gulp-modernizr/issues",
